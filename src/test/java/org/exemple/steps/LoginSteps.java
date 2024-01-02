@@ -37,6 +37,7 @@ public class LoginSteps extends BaseSteps {
     @Step
     public void checkPasswordFieldRequired(){
         Assert.assertEquals(Messages.REQUIRED_FIELD_MESSAGE,loginPage.getRequiredPasswordText());
+
     }
 
 }

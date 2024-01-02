@@ -12,6 +12,8 @@ public class SearchPage extends BasePage {
     private List<WebElementFacade>listOfProductPrices;
     @FindBy(css = "select#input-sort-212464.custom-select")
     private WebElementFacade sortByDropDown;
+    @FindBy(css = ".col .btn.btn-primary.btn-block")
+    private WebElementFacade viewCartButton;
 
     public boolean isProductInList(String productName){
         waitFor(listOfProductNames.get(0));
@@ -31,6 +33,9 @@ public class SearchPage extends BasePage {
         int lastPrice =getIntFromPrice(listOfProductPrices.get(listOfProductPrices.size() - 1).getText());
 
         return firstPrice <= lastPrice;
+    }
+    public void clickOnViewCartButton(){
+        clickOn(viewCartButton);
     }
 
 }

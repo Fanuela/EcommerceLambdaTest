@@ -3,10 +3,7 @@ package org.exemple.features;
 import net.serenitybdd.junit.runners.SerenityRunner;
 import net.thucydides.core.annotations.Managed;
 import net.thucydides.core.annotations.Steps;
-import org.exemple.steps.CartSteps;
-import org.exemple.steps.LoginSteps;
-import org.exemple.steps.RegisterSteps;
-import org.exemple.steps.SearchSteps;
+import org.exemple.steps.*;
 import org.exemple.utils.Constants;
 import org.junit.Before;
 import org.junit.runner.RunWith;
@@ -25,6 +22,10 @@ public class BaseTest {
     protected SearchSteps searchSteps;
     @Steps
     protected CartSteps cartSteps;
+    @Steps
+    protected ForgottenPasswordSteps forgottenPasswordSteps;
+    @Steps
+    protected AddToWishListSteps addToWishListSteps;
 
     @Before
     public void initTests(){
@@ -32,4 +33,5 @@ public class BaseTest {
         driver.get(Constants.BASE_URL);
 
     }
+    public String productName = "Samsung SyncMaster 941BW";
 }

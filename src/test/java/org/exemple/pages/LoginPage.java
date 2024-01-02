@@ -17,6 +17,8 @@ public class LoginPage extends BasePage{
     private WebElementFacade successLoggedMessage;
     @FindBy(css = ".alert-dismissible")
     private WebElementFacade requiredPasswordElement;
+    @FindBy(css = ".form-group a")
+    private WebElementFacade forgottenPasswordLink;
 
 
     public void setEmailField(String email){
@@ -36,5 +38,8 @@ public class LoginPage extends BasePage{
     }
     public String getRequiredPasswordText(){
         return requiredPasswordElement.getText();
+    }
+    public void clickOnForgottenPasswordLink(){
+        clickOn(forgottenPasswordLink);
     }
 }
