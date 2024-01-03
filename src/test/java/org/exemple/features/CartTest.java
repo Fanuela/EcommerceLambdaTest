@@ -13,6 +13,14 @@ public class CartTest extends BaseTest{
         cartSteps.productIsInCartMessage(productName);
     }
     @Test
+    public void addThreeProductsToCartTest() {
+//        loginSteps.doLogin(Constants.USER_EMAIL,Constants.USER_PASSWORD);
+        searchSteps.goToProductPage(productName);
+        cartSteps.addThreeProductsToCart();
+        cartSteps.clickOnAddToCartButton();
+        cartSteps.productIsInCartMessage(productName);
+    }
+    @Test
     public void removeProductFromCartTest(){
         searchSteps.goToProductPage(productName);
         cartSteps.addProductToCart(productName);

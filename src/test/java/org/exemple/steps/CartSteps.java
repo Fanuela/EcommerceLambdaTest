@@ -37,4 +37,8 @@ public class CartSteps extends BaseSteps{
     public void addToCartFromWishList(){
         wishListPage.clickOnAddToCartButton();
     }
+    @Step
+    public void addThreeProductsToCart(){
+        productPage.clickOnIncreaseQuantityButton();
+    }
 }

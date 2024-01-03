@@ -49,4 +49,8 @@ public class RegisterSteps extends BaseSteps {
     public void userIsRegisterWithSuccess(String message){
         Assert.assertTrue(registerPage.isSuccessRegisterMessage(message));
     }
+    @Step
+    public void accountIsAlreadyUsedMessage(){
+        Assert.assertEquals("Warning: E-Mail Address is already registered!",registerPage.accountIsAlreadyUsedMessage());
+    }
 }

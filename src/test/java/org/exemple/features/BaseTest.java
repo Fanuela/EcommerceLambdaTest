@@ -33,5 +33,5 @@ public class BaseTest {
         driver.get(Constants.BASE_URL);
 
     }
-    public String productName = "Samsung SyncMaster 941BW";
+    public String productName = "Palm Treo Pro";
 }

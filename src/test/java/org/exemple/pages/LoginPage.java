@@ -11,7 +11,7 @@ public class LoginPage extends BasePage{
     private WebElementFacade passwordField;
     @FindBy(css = "input.btn")
     private WebElementFacade loginButton;
-    @FindBy(css = "a.list-group-item:nth-child(2)")
+    @FindBy(css = ".mb-3 a:nth-child(2)")
     private WebElementFacade registerButton;
     @FindBy(css = "div.card:nth-child(1) > h2:nth-child(1)")
     private WebElementFacade successLoggedMessage;

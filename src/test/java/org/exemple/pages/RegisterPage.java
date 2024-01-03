@@ -18,12 +18,14 @@ public class RegisterPage extends BasePage {
     private WebElementFacade confirmPasswordField;
     @FindBy(id = "input-newsletter-no")
     private WebElementFacade noNewsletterButton;
-    @FindBy(css = ".custom-checkbox > label:nth-child(2)")
+    @FindBy(css = "div.custom-control.custom-checkbox")
     private WebElementFacade privacyPolicyBox;
     @FindBy(css = "input.btn")
     private WebElementFacade continueButton;
     @FindBy(css = ".page-title")
     private WebElementFacade successRegisterMessage;
+    @FindBy(css = ".alert-dismissible")
+    private WebElementFacade alreadyUsedAccountMessage;
 
     public void setFirstNameField(String firstName){
         typeInto(firstNameField,firstName);
@@ -54,5 +56,8 @@ public class RegisterPage extends BasePage {
     }
     public boolean isSuccessRegisterMessage(String text){
         return successRegisterMessage.containsOnlyText(text);
+    }
+    public String accountIsAlreadyUsedMessage(){
+        return alreadyUsedAccountMessage.getText();
     }
 }

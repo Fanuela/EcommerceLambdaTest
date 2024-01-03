@@ -11,15 +11,31 @@ public class RegisterTest extends BaseTest {
         registerSteps.clickOnRegisterButton();
         registerSteps.typeFirstName("Schmidt");
         registerSteps.typeLastName("Martin");
-        registerSteps.typeEmail("martin.schmiddttt@yahoo.com");
+        registerSteps.typeEmail("martinn.schmiddttt@yahoo.com");
         registerSteps.typeTelephone("+491578426578");
         registerSteps.typePassword("+iv:8xu4J,'i.5Q");
         registerSteps.typeConfirmPassword("+iv:8xu4J,'i.5Q");
         registerSteps.clickOnPrivacyPolicyBox();
         registerSteps.clickOnContinueButton();
         registerSteps.userIsRegisterWithSuccess("Your Account Has Been Created!");
+
     }
 
+    @Test
+    public void registerWithAlreadyUsedDataTest() {
+
+        loginSteps.clickOnMyAccountButton();
+        registerSteps.clickOnRegisterButton();
+        registerSteps.typeFirstName("Schmidt");
+        registerSteps.typeLastName("Martin");
+        registerSteps.typeEmail("martin.schmiddttt@yahoo.com");
+        registerSteps.typeTelephone("+491578426578");
+        registerSteps.typePassword("+iv:8xu4J,'i.5Q");
+        registerSteps.typeConfirmPassword("+iv:8xu4J,'i.5Q");
+        registerSteps.clickOnPrivacyPolicyBox();
+        registerSteps.clickOnContinueButton();
+        registerSteps.accountIsAlreadyUsedMessage();
 
 
+    }
 }
